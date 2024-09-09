@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "data-guard"
+version = "0.0.4"
+description = "Python data validation library"
+readme = "README.md"
+license = "MIT"
+authors = ["Krunal Dodiya <kunal.dodiya1@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+colorama = "^0.4.6"
+
+[tool.poetry.group.dev.dependencies]
+twine = "^5.1.1"
+wheel = "^0.44.0"
+mypy = "^1.11.2"
+pytest = "^8.3.2"
+
+[tool.poetry.urls]
+homepage = "https://www.proalgotrader.com"
+repository = "https://github.com/krunaldodiya/data-guard"
+documentation = "https://data-guard.gitbook.io/docs"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

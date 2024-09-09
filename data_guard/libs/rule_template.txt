@@ -1,0 +1,13 @@
+from data_guard.rule import Rule
+
+class {class_name}(Rule):
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+
+    def validate(self) -> bool:
+        # Implement your validation logic here
+        return True
+
+    def get_message(self) -> str:
+        # Provide a default message or leave it empty
+        return ""
