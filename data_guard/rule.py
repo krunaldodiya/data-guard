@@ -1,6 +1,6 @@
 import abc
 
-from typing import Any, Dict, List, Literal, TYPE_CHECKING
+from typing import Any, Dict, List, Literal, TYPE_CHECKING, Tuple
 
 from data_guard.libs.helpers import pascal_to_snake
 
@@ -172,7 +172,7 @@ class Rule(abc.ABC):
         else:
             return len(str(value))
 
-    def is_numeric_value(self, value: Any):
+    def is_numeric_value(self, value: Any) -> Tuple[bool, int | float]:
         if isinstance(value, (int, float)):
             return True, value
 

@@ -1,7 +1,7 @@
 from data_guard.rule import Rule
 
 
-class Numeric(Rule):
+class Integer(Rule):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
@@ -10,9 +10,7 @@ class Numeric(Rule):
 
         value = self.params.get("value")
 
-        status, _ = self.is_numeric_value(value)
-
-        return status
+        return isinstance(value, int)
 
     def get_message(self) -> str:
-        return "{field} must be a numeric value."
+        return "{field} must be a integer value."
